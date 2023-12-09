@@ -223,8 +223,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1894278883}
   - {fileID: 1601048183}
+  - {fileID: 1894278883}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &52940558
@@ -317,7 +317,7 @@ Transform:
   m_GameObject: {fileID: 99508666}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.0048122, y: -2.1971948, z: -0.75697196}
+  m_LocalPosition: {x: 3.88, y: -2.13, z: -0.75697196}
   m_LocalScale: {x: 1.8375, y: 2.5035937, z: 1.8375}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -338,6 +338,7 @@ MonoBehaviour:
   thresholdA: 10
   thresholdB: 20
   thresholdC: 30
+  burnPrefab: {fileID: 6797148380234044812, guid: f2a09c97f6c81b44db7c47c64f9b6080, type: 3}
 --- !u!60 &99508669
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -819,7 +820,7 @@ Transform:
   m_GameObject: {fileID: 466022353}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.4651875, y: 1.5028052, z: -0.75697196}
+  m_LocalPosition: {x: -4.57, y: 0.93, z: -0.75697196}
   m_LocalScale: {x: 1.8375, y: 2.5035937, z: 1.8375}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -840,6 +841,7 @@ MonoBehaviour:
   thresholdA: 10
   thresholdB: 20
   thresholdC: 30
+  burnPrefab: {fileID: 6797148380234044812, guid: f2a09c97f6c81b44db7c47c64f9b6080, type: 3}
 --- !u!1 &483750249
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +995,7 @@ Transform:
   m_GameObject: {fileID: 847713879}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.894812, y: 1.8728051, z: -0.75697196}
+  m_LocalPosition: {x: 6.18, y: 1.4, z: -0.75697196}
   m_LocalScale: {x: 1.8375, y: 2.5035937, z: 1.8375}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1014,6 +1016,7 @@ MonoBehaviour:
   thresholdA: 10
   thresholdB: 20
   thresholdC: 30
+  burnPrefab: {fileID: 6797148380234044812, guid: f2a09c97f6c81b44db7c47c64f9b6080, type: 3}
 --- !u!60 &847713882
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1249,7 +1252,7 @@ MonoBehaviour:
   thresholdA: 25
   thresholdB: 30
   thresholdC: 40
-  heatBarPrefab: {fileID: 2593622716301288033, guid: fefb18029cab67f4780d83861ec56e53, type: 3}
+  burnPrefab: {fileID: 6797148380234044812, guid: f2a09c97f6c81b44db7c47c64f9b6080, type: 3}
 --- !u!58 &1291719458
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1386,7 +1389,7 @@ MonoBehaviour:
   thresholdA: 10
   thresholdB: 25
   thresholdC: 100
-  heatBarPrefab: {fileID: 2593622716301288033, guid: fefb18029cab67f4780d83861ec56e53, type: 3}
+  burnPrefab: {fileID: 6797148380234044812, guid: f2a09c97f6c81b44db7c47c64f9b6080, type: 3}
 --- !u!58 &1297507806
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1559,7 +1562,7 @@ MonoBehaviour:
   thresholdA: 5
   thresholdB: 10
   thresholdC: 15
-  heatBarPrefab: {fileID: 2593622716301288033, guid: fefb18029cab67f4780d83861ec56e53, type: 3}
+  burnPrefab: {fileID: 6797148380234044812, guid: f2a09c97f6c81b44db7c47c64f9b6080, type: 3}
 --- !u!58 &1430505478
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1623,7 +1626,7 @@ Transform:
   m_GameObject: {fileID: 1528741502}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.984812, y: -4.407195, z: -0.75697196}
+  m_LocalPosition: {x: 6.4, y: -4.51, z: -0.75697196}
   m_LocalScale: {x: 1.8375, y: 2.5035937, z: 1.8375}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1644,6 +1647,7 @@ MonoBehaviour:
   thresholdA: 10
   thresholdB: 20
   thresholdC: 30
+  burnPrefab: {fileID: 6797148380234044812, guid: f2a09c97f6c81b44db7c47c64f9b6080, type: 3}
 --- !u!60 &1528741505
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1885,7 +1889,7 @@ GameObject:
   - component: {fileID: 1601048183}
   - component: {fileID: 1601048184}
   m_Layer: 0
-  m_Name: Hexagon Flat-Top
+  m_Name: FlamethrowerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1986,7 +1990,7 @@ Transform:
   m_GameObject: {fileID: 1626207160}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.9451876, y: -2.567195, z: -0.75697196}
+  m_LocalPosition: {x: -5.9, y: -3.07, z: -0.75697196}
   m_LocalScale: {x: 1.8375, y: 2.5035937, z: 1.8375}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2007,6 +2011,7 @@ MonoBehaviour:
   thresholdA: 10
   thresholdB: 20
   thresholdC: 30
+  burnPrefab: {fileID: 6797148380234044812, guid: f2a09c97f6c81b44db7c47c64f9b6080, type: 3}
 --- !u!60 &1626207163
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2119,7 +2124,7 @@ GameObject:
   - component: {fileID: 1894278882}
   - component: {fileID: 1894278881}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: FlamethrowerFlames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2333,7 +2338,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 9
+      scalar: 20
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -2829,7 +2834,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 10
+    angle: 12
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -4740,7 +4745,7 @@ ParticleSystem:
     magnitude:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.7
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5901,7 +5906,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5957,7 +5962,7 @@ ParticleSystem:
     collidesWith:
       serializedVersion: 2
       m_Bits: 384
-    maxCollisionShapes: 256
+    maxCollisionShapes: 365
     quality: 0
     voxelSize: 0.5
     collisionMessages: 1

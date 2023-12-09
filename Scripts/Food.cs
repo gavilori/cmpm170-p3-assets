@@ -10,7 +10,7 @@ public class Food : MonoBehaviour
     [SerializeField] private int thresholdC;
     
     private Canvas mainCanvas;
-    [SerializeField] private GameObject heatBarPrefab;
+    [SerializeField] private GameObject burnPrefab;
     private int hits;
     // Start is called before the first frame update
     void Start()
@@ -40,6 +40,7 @@ public class Food : MonoBehaviour
         if (hits == thresholdC) {
             Debug.Log(name + " (C)");
             GetComponent<SpriteRenderer>().color = Color.red;
+            Instantiate(burnPrefab, transform.position, Quaternion.identity);
         }
     }
 }

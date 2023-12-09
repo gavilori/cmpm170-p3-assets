@@ -8,6 +8,7 @@ public class Tree : MonoBehaviour
     [SerializeField] private int thresholdA;
     [SerializeField] private int thresholdB;
     [SerializeField] private int thresholdC;
+    [SerializeField] private GameObject burnPrefab;
     private int hits;
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class Tree : MonoBehaviour
         if (hits == thresholdC) {
             Debug.Log(name + " (C)");
             GetComponent<SpriteRenderer>().color = new Color32(0x31, 0x26, 0x1A, 0xFF);
+            Instantiate(burnPrefab, transform.position, Quaternion.identity);
         }
     }
 }
