@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
         allTrees = GameObject.FindGameObjectsWithTag("Tree");
         allFood = GameObject.FindGameObjectsWithTag("Food");
         totalTrees = allTrees.Length;
-        Debug.Log("total trees: " + totalTrees);
         burningTrees = 0;
         perfectlyCookedFoods = 0;
         playAgainButton.SetActive(false);
@@ -36,15 +35,17 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkForTrees();
-
-        checkFood();
-
-        checkScore();
-
-        if (gameOver)
+        if (!gameOver)
         {
-            Debug.Log("stars: " + perfectlyCookedFoods);
+            checkForTrees();
+
+            checkFood();
+
+            checkScore();
+        }
+
+        else
+        {
             if (perfectlyCookedFoods == 3)
             {
                 gameStatusText.text = "You Win!";
@@ -64,7 +65,6 @@ public class GameManager : MonoBehaviour
         {
             if (tree.GetComponent<Tree>().burnFlag)
             {
-                Debug.Log("burning trees: " + burningTrees);
                 burningTrees += 1;
             }
         }

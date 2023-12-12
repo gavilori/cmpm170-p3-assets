@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -22,19 +21,25 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // flamethrower
-        var emission = flamethrowerParticles.emission;
-        if (Input.GetButton("Fire1")) {
-            emission.enabled = true;
-            if (!playSound)
+        if (!GameManager.gameOver)
+        {
+            // flamethrower
+            var emission = flamethrowerParticles.emission;
+            if (Input.GetButton("Fire1"))
             {
-                playSound = true;
-                flameSFX.Play();
+                emission.enabled = true;
+                if (!playSound)
+                {
+                    playSound = true;
+                    flameSFX.Play();
+                }
             }
-        } else {
-            emission.enabled = false;
-            playSound = false;
-            flameSFX.Stop();
+            else
+            {
+                emission.enabled = false;
+                playSound = false;
+                flameSFX.Stop();
+            }
         }
     }
 
