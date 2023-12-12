@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
     [SerializeField] ParticleSystem flamethrowerParticles;
     [SerializeField] private float playerSpeed;
     [SerializeField] private float turnSpeed;
+    [SerializeField] AudioSource flameSFX;
     private Vector2 direction;
+    private bool playSound = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +26,15 @@ public class Player : MonoBehaviour
         var emission = flamethrowerParticles.emission;
         if (Input.GetButton("Fire1")) {
             emission.enabled = true;
+            if (!playSound)
+            {
+                playSound = true;
+                flameSFX.Play();
+            }
         } else {
             emission.enabled = false;
+            playSound = false;
+            flameSFX.Stop();
         }
     }
 

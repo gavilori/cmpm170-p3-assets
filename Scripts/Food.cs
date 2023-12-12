@@ -9,7 +9,13 @@ public class Food : MonoBehaviour
     [SerializeField] private int thresholdA;
     [SerializeField] private int thresholdB;
     [SerializeField] private int thresholdC;
-    
+
+    [SerializeField] private GameObject spriteA;
+    [SerializeField] private GameObject spriteB;
+    [SerializeField] private GameObject spriteC;
+
+    public bool perfectCook;
+
     private Canvas mainCanvas;
     private Camera cam;
     [SerializeField] private GameObject burnPrefab;
@@ -21,38 +27,29 @@ public class Food : MonoBehaviour
         hits = 0;
         mainCanvas = FindFirstObjectByType<Canvas>();
         cam = FindFirstObjectByType<Camera>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        perfectCook = false;
     }
 
     private void OnParticleCollision(GameObject other)
     {
         hits++;
-        // Debug.Log(hits);
-        if (hits == 1) {
-            // FIXME: spawn a burn meter UI element
-            /*
-            GameObject barUI = Instantiate(barPrefab);
-            barUI.transform.SetParent(mainCanvas.transform, false);
-            barUI.transform.localPosition = transform.position;
-            */
-        }
         if (hits == thresholdA) {
             Debug.Log(name + " (A)");
-            GetComponent<SpriteRenderer>().color = Color.green;
+            spriteA.SetActive(true);
         }
         if (hits == thresholdB) {
             Debug.Log(name + " (B)");
-            GetComponent<SpriteRenderer>().color = Color.yellow;
+            spriteA.SetActive(false);
+            spriteB.SetActive(true);
+            perfectCook = true;
         }
         if (hits == thresholdC) {
             Debug.Log(name + " (C)");
-            GetComponent<SpriteRenderer>().color = Color.red;
+            spriteB.SetActive(false);
+            spriteC.SetActive(true);
+            perfectCook = false;
             Instantiate(burnPrefab, transform.position, Quaternion.identity);
+
         }
     }
 }
